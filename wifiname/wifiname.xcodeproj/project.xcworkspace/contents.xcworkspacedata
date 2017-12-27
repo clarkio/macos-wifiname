@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:wifiname.xcodeproj">
+      location = "self:/Users/bc/dev/_repos/wifiname/wifiname/wifiname.xcodeproj">
    </FileRef>
 </Workspace>

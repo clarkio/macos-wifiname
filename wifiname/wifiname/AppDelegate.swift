@@ -12,7 +12,7 @@ import CoreWLAN
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
     
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let statusItem1 = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let wifiClient = CWWiFiClient.shared()
     var currentSsid: String? = nil
     var visible: Bool = true
@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
     }
     
     func updateStatusBar() {
-        if let button = self.statusItem.button {
+        if let button = self.statusItem1.button {
             if let ssid = self.getSSID() {
                 currentSsid = ssid
                 button.title = ssid
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
-        statusItem.menu = menu
+        statusItem1.menu = menu
     }
     
     @objc func toggleVisibility(_ sender: Any?) {
@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
         if visible {
             self.updateStatusBar()
         } else {
-            if let button = self.statusItem.button {
+            if let button = self.statusItem1.button {
                 let hideText = String.init(repeating: "_", count: (self.currentSsid!.count))
                 button.title = hideText
             }
