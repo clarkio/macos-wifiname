@@ -1,5 +1,6 @@
 # macos-wifiname
 
+![](screenshot.gif)
 
 ## Install
 1. Download the [latest release](https://github.com/clarkio/macos-wifiname/releases)
