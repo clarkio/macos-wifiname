@@ -12,10 +12,12 @@ import CoreWLAN
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
     
-    let statusItem1 = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let wifiClient = CWWiFiClient.shared()
     var currentSsid: String? = nil
     var visible: Bool = true
+    var highlightCheckCount: Int = 0
+    var isHighlighted: Bool = false
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         listenForSsidChanges()
@@ -24,11 +26,48 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
     }
     
     func updateStatusBar() {
-        if let button = self.statusItem1.button {
+        if let button = self.statusBarItem.button {
             if let ssid = self.getSSID() {
                 currentSsid = ssid
                 button.title = ssid
+            } else {
+                currentSsid = "Disconnected"
+                button.title = "Disconnected"
             }
+            highlightChange()
+        }
+    }
+    
+    func highlightChange() {
+        highlightStatusBarItem()
+        
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (OriginalTimer) in
+            if self.isHighlighted {
+                self.unhighlighStatusBarItem()
+            } else {
+                self.highlightStatusBarItem()
+            }
+            
+            if self.highlightCheckCount == 6 {
+                self.highlightCheckCount = 0
+                self.unhighlighStatusBarItem()
+                OriginalTimer.invalidate()
+            }
+        })
+    }
+    
+    func highlightStatusBarItem() {
+        if let button = self.statusBarItem.button {
+            button.highlight(true)
+            self.isHighlighted = true
+            self.highlightCheckCount += 1
+        }
+    }
+    
+    func unhighlighStatusBarItem() {
+        if let button = self.statusBarItem.button {
+            button.highlight(false)
+            self.isHighlighted = false
         }
     }
     
@@ -59,7 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
-        statusItem1.menu = menu
+        statusBarItem.menu = menu
     }
     
     @objc func toggleVisibility(_ sender: Any?) {
@@ -67,7 +106,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
         if visible {
             self.updateStatusBar()
         } else {
-            if let button = self.statusItem1.button {
+            if let button = self.statusBarItem.button {
                 let hideText = String.init(repeating: "_", count: (self.currentSsid!.count))
                 button.title = hideText
             }
@@ -75,5 +114,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
+        do {
+            try wifiClient.stopMonitoringEvent(with: .ssidDidChange)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
