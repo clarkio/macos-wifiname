@@ -29,10 +29,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CWEventDelegate {
         if let button = self.statusBarItem.button {
             if let ssid = self.getSSID() {
                 currentSsid = ssid
-                button.title = ssid
+                if visible {
+                    button.title = ssid
+                }
             } else {
                 currentSsid = "Disconnected"
-                button.title = "Disconnected"
+                if visible {
+                    button.title = "Disconnected"
+                }
             }
             highlightChange()
         }
