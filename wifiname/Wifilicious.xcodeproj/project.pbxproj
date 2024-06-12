@@ -3,24 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41076D351FF3EA1900A16B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41076D341FF3EA1900A16B13 /* AppDelegate.swift */; };
-		41076D371FF3EA1900A16B13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41076D361FF3EA1900A16B13 /* ViewController.swift */; };
+		000046482BF619EB00229202 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000046442BF619EA00229202 /* Authorization.swift */; };
+		000046492BF619EB00229202 /* SSID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000046452BF619EA00229202 /* SSID.swift */; };
+		0000464B2BF619EB00229202 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000046472BF619EB00229202 /* Visibility.swift */; };
+		0000F6432BFA3D4D00CB23DB /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000F6422BFA3D4D00CB23DB /* Menu.swift */; };
+		0025E3E32BF60F88005AEF82 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025E3E22BF60F88005AEF82 /* Prompt.swift */; };
+		00E3959E2BF59A7B006D74EB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00E3959D2BF59A7B006D74EB /* Credits.rtf */; };
+		41076D351FF3EA1900A16B13 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41076D341FF3EA1900A16B13 /* App.swift */; };
 		41076D391FF3EA1900A16B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41076D381FF3EA1900A16B13 /* Assets.xcassets */; };
-		41076D3C1FF3EA1900A16B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41076D3A1FF3EA1900A16B13 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41076D311FF3EA1900A16B13 /* wifiname.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifiname.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		41076D341FF3EA1900A16B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41076D361FF3EA1900A16B13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		000046442BF619EA00229202 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		000046452BF619EA00229202 /* SSID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSID.swift; sourceTree = "<group>"; };
+		000046472BF619EB00229202 /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		0000F6422BFA3D4D00CB23DB /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		0025E3E22BF60F88005AEF82 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		00E3959D2BF59A7B006D74EB /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		41076D311FF3EA1900A16B13 /* Wifilicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wifilicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41076D341FF3EA1900A16B13 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		41076D381FF3EA1900A16B13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41076D3B1FF3EA1900A16B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41076D3D1FF3EA1900A16B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41076D3E1FF3EA1900A16B13 /* wifiname.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wifiname.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +44,7 @@
 		41076D281FF3EA1900A16B13 = {
 			isa = PBXGroup;
 			children = (
-				41076D331FF3EA1900A16B13 /* wifiname */,
+				41076D331FF3EA1900A16B13 /* Wifilicious */,
 				41076D321FF3EA1900A16B13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,30 +52,33 @@
 		41076D321FF3EA1900A16B13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41076D311FF3EA1900A16B13 /* wifiname.app */,
+				41076D311FF3EA1900A16B13 /* Wifilicious.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41076D331FF3EA1900A16B13 /* wifiname */ = {
+		41076D331FF3EA1900A16B13 /* Wifilicious */ = {
 			isa = PBXGroup;
 			children = (
-				41076D341FF3EA1900A16B13 /* AppDelegate.swift */,
-				41076D361FF3EA1900A16B13 /* ViewController.swift */,
+				000046442BF619EA00229202 /* Authorization.swift */,
+				000046452BF619EA00229202 /* SSID.swift */,
+				000046472BF619EB00229202 /* Visibility.swift */,
+				0025E3E22BF60F88005AEF82 /* Prompt.swift */,
+				41076D341FF3EA1900A16B13 /* App.swift */,
 				41076D381FF3EA1900A16B13 /* Assets.xcassets */,
-				41076D3A1FF3EA1900A16B13 /* Main.storyboard */,
 				41076D3D1FF3EA1900A16B13 /* Info.plist */,
-				41076D3E1FF3EA1900A16B13 /* wifiname.entitlements */,
+				00E3959D2BF59A7B006D74EB /* Credits.rtf */,
+				0000F6422BFA3D4D00CB23DB /* Menu.swift */,
 			);
-			path = wifiname;
+			path = Wifilicious;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41076D301FF3EA1900A16B13 /* wifiname */ = {
+		41076D301FF3EA1900A16B13 /* Wifilicious */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41076D411FF3EA1900A16B13 /* Build configuration list for PBXNativeTarget "wifiname" */;
+			buildConfigurationList = 41076D411FF3EA1900A16B13 /* Build configuration list for PBXNativeTarget "Wifilicious" */;
 			buildPhases = (
 				41076D2D1FF3EA1900A16B13 /* Sources */,
 				41076D2E1FF3EA1900A16B13 /* Frameworks */,
@@ -78,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = wifiname;
+			name = Wifilicious;
 			productName = wifiname;
-			productReference = 41076D311FF3EA1900A16B13 /* wifiname.app */;
+			productReference = 41076D311FF3EA1900A16B13 /* Wifilicious.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -89,12 +99,14 @@
 		41076D291FF3EA1900A16B13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = Clarkio;
 				TargetAttributes = {
 					41076D301FF3EA1900A16B13 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1540;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -104,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41076D2C1FF3EA1900A16B13 /* Build configuration list for PBXProject "wifiname" */;
+			buildConfigurationList = 41076D2C1FF3EA1900A16B13 /* Build configuration list for PBXProject "Wifilicious" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41076D301FF3EA1900A16B13 /* wifiname */,
+				41076D301FF3EA1900A16B13 /* Wifilicious */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41076D391FF3EA1900A16B13 /* Assets.xcassets in Resources */,
-				41076D3C1FF3EA1900A16B13 /* Main.storyboard in Resources */,
+				00E3959E2BF59A7B006D74EB /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +151,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41076D371FF3EA1900A16B13 /* ViewController.swift in Sources */,
-				41076D351FF3EA1900A16B13 /* AppDelegate.swift in Sources */,
+				0000F6432BFA3D4D00CB23DB /* Menu.swift in Sources */,
+				000046492BF619EB00229202 /* SSID.swift in Sources */,
+				0000464B2BF619EB00229202 /* Visibility.swift in Sources */,
+				000046482BF619EB00229202 /* Authorization.swift in Sources */,
+				41076D351FF3EA1900A16B13 /* App.swift in Sources */,
+				0025E3E32BF60F88005AEF82 /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		41076D3A1FF3EA1900A16B13 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41076D3B1FF3EA1900A16B13 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		41076D3F1FF3EA1900A16B13 /* Debug */ = {
@@ -172,6 +177,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -179,19 +185,23 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -206,10 +216,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.13;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -229,6 +239,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -236,19 +247,23 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -257,11 +272,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = macosx10.13;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -269,16 +285,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = wifiname/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = Wifilicious/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wifilicious;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarkio.wifiname-0.2.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -286,24 +311,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = wifiname/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = Wifilicious/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wifilicious;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarkio.wifiname-0.2.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41076D2C1FF3EA1900A16B13 /* Build configuration list for PBXProject "wifiname" */ = {
+		41076D2C1FF3EA1900A16B13 /* Build configuration list for PBXProject "Wifilicious" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41076D3F1FF3EA1900A16B13 /* Debug */,
@@ -312,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41076D411FF3EA1900A16B13 /* Build configuration list for PBXNativeTarget "wifiname" */ = {
+		41076D411FF3EA1900A16B13 /* Build configuration list for PBXNativeTarget "Wifilicious" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41076D421FF3EA1900A16B13 /* Debug */,
