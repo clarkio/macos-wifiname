@@ -3,7 +3,7 @@
 ![](screenshot.gif)
 
 ## Install
-1. Download the [latest release](https://github.com/clarkio/macos-wifiname/releases)
+1. Download the [latest release](https://github.com/stywn93/macos-wifiname/releases/tag/1.0.0)
 2. Unzip the downloaded .zip file
 3. Open wifiname.app
 
